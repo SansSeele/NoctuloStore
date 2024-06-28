@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Actualizar Artículo</title>
+    <link rel="stylesheet" href="../static/css/css_additem.css">
+    <link rel="stylesheet" href="../static/css/estiloProducto.css">
+</head>
+<body>
+  <nav>
+    <a href="/">Inicio</a>
+    <a href="/producto">Productos</a>
+    <a href="/#contact">Contacto</a>
+    <a href="/#about">Nosotros</a>
+    <a href="/login">Login</a>
+    <a href="/register">Register</a>
+  </nav>
+      
+      <section class="banner" id="home">
+        <h1>Bienvenidos a la mejor tienda de hardware de Chile</h1>
+      </section>
+    <h1>Actualizar Artículo</h1>
+    <form method="POST">
+      <label for="name">Nombre:</label>
+      <input type="text" id="name" name="name" value="{{ item['name'] }}" required>
+      <label for="description">Descripción:</label>
+      <textarea id="description" name="description" required>{{ item['description'] }}</textarea>
+      <label for="price">Precio:</label>
+      <input type="number" step="0.01" id="price" name="price" value="{{ item['price'] }}" required>
+      <label for="image_url">URL de la Imagen:</label>
+      <input type="text" id="image_url" name="image_url" value="{{ item['image_url'] }}">
+      <label for="category">Categoría:</label>
+      <input type="text" id="category" name="category" value="{{ item['category'] }}">
+      <button type="submit">Actualizar</button>
+    </form>
+    <p>Categoria:<br>
+      gabinetes<br>
+      almacenamiento<br>
+      alimentacion<br>
+      placas_madre<br>
+      procesadores<br>
+      ram<br>
+      tarjetas_graficas<br>
+      ventiladores<br>
+      ventilacion<br>
+    </p>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/css_SistemaStock.css">
+    <link rel="stylesheet" href="../static/css/estiloProducto.css">
+  
+    <title>Document</title>
+</head>
+<body>
+  <nav>
+    <a href="/">Inicio</a>
+    <a href="/producto">Productos</a>
+    <a href="/#contact">Contacto</a>
+    <a href="/#about">Nosotros</a>
+    <a href="/login">Login</a>
+    <a href="/register">Register</a>
+  </nav>
+  
+  <section class="banner" id="home">
+    <h1>Bienvenidos a la mejor tienda de hardware de Chile</h1>
+  </section>
+  <h1>Sistema de Stock</h1>
+  <a href="{{ url_for('add_item') }}">Agregar Artículo</a>
+  <table>
+      <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Cantidad</th>
+          <th>Precio</th>
+          <th>Acciones</th>
+      </tr>
+      {% for item in items %}
+      <tr>
+          <td>{{ item[0] }}</td>
+          <td>{{ item[1] }}</td>
+          <td>{{ item[2] }}</td>
+          <td>{{ item[3] }}</td>
+          <td>
+              <a href="{{ url_for('update_item', id=item[0]) }}">Editar</a>
+              <a href="{{ url_for('delete_item', id=item[0]) }}">Eliminar</a>
+          </td>
+      </tr>
+      {% endfor %}
+  </table>
+</body>
+</html>

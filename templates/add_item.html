@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Agregar Artículo</title>
+    <link rel="stylesheet" href="../static/css/css_additem.css">
+    <link rel="stylesheet" href="../static/css/estiloProducto.css">
+</head>
+<body>
+    <nav>
+      <a href="/">Inicio</a>
+      <a href="/producto">Productos</a>
+      <a href="/#contact">Contacto</a>
+      <a href="/#about">Nosotros</a>
+      <a href="/login">Login</a>
+      <a href="/register">Register</a>
+      </nav>
+      
+      <section class="banner" id="home">
+        <h1>Bienvenidos a la mejor tienda de hardware de Chile</h1>
+      </section>
+    <h1>Agregar Artículo</h1>
+    <form method="POST" action="{{ url_for('add_item') }}">
+      <label for="name">Nombre:</label>
+      <input type="text" id="name" name="name" required><br>
+      <label for="description">Descripción:</label>
+      <textarea id="description" name="description" required></textarea><br>
+      <label for="price">Precio:</label>
+      <input type="text" id="price" name="price" required><br>
+      <label for="image_url">URL de la Imagen:</label>
+      <input type="text" id="image_url" name="image_url"><br>
+      <label for="category">Categoria</label>
+      <input type="text" name="category"><br>
+      <button type="submit">Agregar</button>
+  </form>
+  <p>Categoria:<br>
+    gabinetes<br>
+    almacenamiento<br>
+    alimentacion<br>
+    placas_madre<br>
+    procesadores<br>
+    ram<br>
+    tarjetas_graficas<br>
+    ventiladores<br>
+    ventilacion<br>
+  </p>
+
+  <a href="{{ url_for('index') }}">Volver al Catálogo</a>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noctulo Hardware Store</title>
+    <link rel="stylesheet" href="../static/css/indextienda.css">
+</head>
+<body>
+    <header>
+        <img src="../static/images/30.png" alt="Logo de Noctulo Hardware Store">
+    </header>
+
+    <nav>
+        <a href="/">Inicio</a>
+        <a href="/producto">Productos</a>
+        <a href="/#contact">Contacto</a>
+        <a href="/#about">Nosotros</a>
+        <a href="/login">Login</a>
+        <a href="/register">Register</a>
+    </nav>
+
+    <section class="banner" id="home">
+        <h1>Bienvenidos a la mejor tienda de hardware de Chile</h1>
+    </section>
+
+    <div class="container" id="products">
+        <center><h2>Nuestros Productos Destacados</h2></center>
+        <div class="products">
+            {% for producto in productos_destacados %}
+            <div class="product">
+                <img src="{{ producto.imagen }}" alt="{{ producto.nombre }}">
+                <h2>{{ producto.nombre }}</h2>
+                <p>{{ producto.descripcion }}</p>
+                <p><strong>{{ producto.precio }}</strong></p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="section-contact" id="contact">
+        <div class="container">
+            <div class="section-title">Contacto</div>
+            <p>Teléfono: +56 9 1234 5678</p>
+            <p>Email: info@hardwarechile.cl</p>
+            <p>Dirección: Av. Meru Ane 69, Santiago, Chile</p>
+        </div>
+    </div>
+
+    <div class="section-about" id="about">
+        <div class="container">
+            <div class="section-title">Sobre Nosotros</div>
+            <p>Somos Noctulo Hardware Store, una tienda especializada en la venta de hardware con los mejores productos para tu Pc Gamer.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Noctulo Hardware Store. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

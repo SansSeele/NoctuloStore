@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Procesadores - Tienda de Hardware Chile</title>
+    <link rel="stylesheet" href="../static/css/tiendap.css">
+</head>
+<body>
+    <header>
+        <h1>Procesadores</h1>
+        <p>Encuentra el gabinete perfecto para tu PC</p>
+    </header>
+
+
+    <nav>
+        <a href="/">Inicio</a>
+        <a href="/producto">Productos</a>
+        <a href="/#contact">Contacto</a>
+        <a href="/#about">Nosotros</a>
+        <a href="/login">Login</a>
+        <a href="/register">Register</a>
+      </nav>
+
+      <h1>Procesadores</h1>
+      <div class="container">
+          {% for item in items %}
+              <div class="product">
+                  <img src="{{ item[4] }}" alt="{{ item[1] }}">
+                  <h2>{{ item[1] }}</h2>
+                  <p>{{ item[2] }}</p>
+                  <p><strong>${{ item[3] }}</strong></p>
+              </div>
+          {% endfor %}
+      </div>
+
+    <footer>
+        <p>&copy; 2024 Tienda de Hardware Chile. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

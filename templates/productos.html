@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - Tienda de Hardware Chile</title>
+    <link rel="stylesheet" href="../static/css/estiloProducto.css">
+</head>
+<body>
+    <header>
+        <h1>Productos</h1>
+        <p>Explora nuestra amplia gama de productos</p>
+    </header>
+
+    <nav>
+        <a href="/">Inicio</a>
+        <a href="/producto">Productos</a>
+        <a href="/#contact">Contacto</a>
+        <a href="/#about">Nosotros</a>
+        <a href="/login">Login</a>
+        <a href="/register">Register</a>
+      </nav>
+
+    <div class="container">
+        <div class="product-category">
+            <h3>Gabinetes</h3>
+            <a href="{{ url_for('show_category', category='gabinetes') }}">Ver productos</a>
+        </div>
+        <div class="product-category">
+            <h3>RAM</h3>
+            <a href="{{ url_for('show_category', category='ram') }}">Ver productos</a>
+        </div>
+        <div class="product-category">
+            <h3>Tarjetas Gráficas</h3>
+            <a href="{{ url_for('show_category', category='tarjetas-graficas') }}">Ver productos</a>
+        </div>
+        <div class="product-category">
+            <h3>Procesadores</h3>
+            <a href="{{ url_for('show_category', category='procesadores') }}">Ver productos</a>
+        </div>
+        <div class="product-category">
+            <h3>Ventilación (Water Cooling o por aire)</h3>
+            <a href="{{ url_for('show_category', category='ventilacion') }}">Ver productos</a>
+        </div>
+        <div class="product-category">
+            <h3>Placas Madre</h3>
+            <a href="{{ url_for('show_category', category='placas-madre') }}">Ver productos</a>
+        </div>
+        <div class="product-category">
+            <h3>Ventiladores (120mm y 240mm)</h3>
+            <a href="{{ url_for('show_category', category='ventiladores') }}">Ver productos</a>
+        </div>
+        <div class="product-category">
+            <h3>Fuentes de Alimentación</h3>
+            <a href="{{ url_for('show_category', category='alimentacion') }}">Ver productos</a>
+        </div>
+        <div class="product-category">
+            <h3>Almacenamiento (SSD, M.2, HDD)</h3>
+            <a href="{{ url_for('show_category', category='almacenamiento') }}">Ver productos</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Tienda de Hardware Chile. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

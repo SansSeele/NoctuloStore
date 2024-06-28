@@ -1,0 +1,143 @@
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #565656;
+            overflow-x: hidden;
+        }
+        header {
+            background-color: #555555;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #000000;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .banner {
+            background-size: cover;
+            text-align: center;
+            color: white;
+            padding: 100px 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .banner h1 {
+            font-size: 50px;
+            margin: 0;
+        }
+        .container {
+            padding: 20px;
+        }
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .product {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin: 10px;
+            padding: 20px;
+            text-align: center;
+            width: 30%;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+        .product:hover {
+            transform: scale(1.05);
+        }
+        .product img {
+            max-width: 100%;
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 10px;
+        }
+        .product h2 {
+            font-size: 20px;
+            margin: 10px 0;
+        }
+        .product p {
+            color: #555;
+        }
+        footer {
+            background-color: #ffffff;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .products-list {
+            display: none;
+        }
+        .products-list.active {
+            display: block;
+        }
+        .product-category {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .product-category h3 {
+            margin: 0;
+        }
+
+        /* Estilos para secciones Contacto y Sobre Nosotros */
+        .section-contact {
+            background-color: #f2f2f2;
+            padding: 40px 20px;
+        }
+        .section-about {
+            background-color: #d9d9d9;
+            padding: 40px 20px;
+        }
+        .section-title {
+            font-size: 24px;
+            border-bottom: 2px solid #ffffff;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .product {
+        max-width: 300px; /* Ajusta el ancho máximo según tu diseño */
+        border: 1px solid #ccc; /* Borde opcional */
+        padding: 10px; /* Espacio interno */
+    }
+    .product img {
+        max-width: 100%; /* Ajusta la imagen al ancho del contenedor */
+        height: auto; /* Ajusta la altura proporcionalmente */
+        display: block; /* Elimina el espacio debajo de la imagen */
+        margin-bottom: 10px; /* Espacio opcional debajo de la imagen */
+    }
+    .product h2 {
+        font-size: 18px; /* Tamaño de fuente del título */
+        margin-bottom: 5px; /* Espacio opcional debajo del título */
+    }
+    .product p {
+        font-size: 14px; /* Tamaño de fuente del texto */
+        margin-bottom: 5px; /* Espacio opcional debajo del texto */
+    }
+    .product strong {
+        font-size: 16px; /* Tamaño de fuente del precio */
+    }

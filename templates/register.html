@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="../static/css/cssLoginRegister.css">
+  <link rel="stylesheet" href="../static/css/indextienda.css">
+</head>
+<body>
+  <nav>
+    <a href="/">Inicio</a>
+    <a href="/producto">Productos</a>
+    <a href="/#contact">Contacto</a>
+    <a href="/#about">Nosotros</a>
+    <a href="/login">Login</a>
+    <a href="/register">Register</a>
+  </nav>
+
+<section class="banner" id="home">
+    <h1>Bienvenidos a la mejor tienda de hardware de Chile</h1>
+</section>
+<center>
+    <form action="{{ url_for('register') }}" method="post">
+        <label for="nombre">Nombre:</label><br>
+        <input type="text" id="nombre" name="nombre" required><br>
+        
+        <label for="apellido">Apellido:</label><br>
+        <input type="text" id="apellido" name="apellido" required><br>
+        
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br>
+        
+        <label for="password">Contraseña:</label><br>
+        <input type="password" id="password" name="password" required><br><br>
+        
+        <input type="submit" value="Registrar">
+    </form>
+</center>
+    
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <footer>
+      <p>&copy; 2024 Tienda de Hardware Chile. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>
